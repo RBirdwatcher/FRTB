@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions:FunctionSpecModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:functions="http://www.eclipse.org/functions" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="commonBaselColumnFunctions">
+  <functionSpecs xsi:type="functions:BasicFunctionSpec" functionalName="CustomFunctions.getCorrelationFactor" name="getCorrelationFactor" sqlName="getCorrelationFactor" type="Double"/>
+</functions:FunctionSpecModule>

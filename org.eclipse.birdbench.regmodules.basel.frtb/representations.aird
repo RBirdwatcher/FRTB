@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_kKAPYBHQEeqIPbznnNxZ3w" selectedViews="_Ye4XgEpkEeq508dfmJSfVA" version="14.3.0.201909031200">
+  <semanticResources>basel_frtb/columns/FRTBDerivedDimensions.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBDerivedDomain.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBSourceDomains.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBDerivedDomainMembers.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBDerivedIdentifiers.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBDerivedMeasures.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBSourceDimensions.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBSourceDomainMembers.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBSourceIdentifiers.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/columns/FRTBSourceMeasures.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/cube_structures/FRTBCombinations.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/cube_structures/FRTBCubeStructures.birdbench_data_definition</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTBCurvatureScenariosUnion.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvaturCVRkCalc.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvaturCVRkCalc2.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvature_deltaStripping.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTBSourceTables.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EC_Datapoints.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvature_FinalCVR.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvatureAggregatedCVR.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EC_DatapointsVERSION2.cubes</semanticResources>
+  <semanticResources>basel_frtb/cubes/FRTB_EquityCurvature_FinalCVRVERSION2.cubes</semanticResources>
+  <semanticResources>basel_frtb/functions/FRTBColumnFunctions.functions</semanticResources>
+  <semanticResources>basel_frtb/functions/commonBaselColumnFunctions.functions</semanticResources>
+  <semanticResources>basel_frtb/input_data/FRTBInputData.test</semanticResources>
+  <semanticResources>basel_frtb/input_layer_cube/FRTBEquityCurvature.trl_transformation</semanticResources>
+  <semanticResources>basel_frtb/requirements/FRTBProcessAndScenarios.trl_transformation</semanticResources>
+  <semanticResources>basel_frtb/input_layer_cube/FRTBReadEquityDelta.trl_transformation</semanticResources>
+  <semanticResources>basel_frtb/navigation_context/defaultNavigationContext.trl_navigation_context</semanticResources>
+  <semanticResources>basel_frtb/requirements/default_tag_group.tags</semanticResources>
+  <semanticResources>basel_frtb/release_description/release4.trl_transformation</semanticResources>
+  <semanticResources>basel_frtb/requirements/CRR_RequirementsBundle.requirements_text</semanticResources>
+  <semanticResources>basel_frtb/views/FRTB_EquityCurvature_deltaStripping.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTBCurvatureScenariosUnion.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTB_EquityCurvature_deltaStripping.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTB_EquityCurvature_FinalCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTBCorrelatedCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTB_EquityCurvatureCVRkCalc.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTB_EquityCurvatureCVRkCalc2.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTBUncorrelatedCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/report_transformations/FRTBReportCellViews.trl_report_cell_views</semanticResources>
+  <semanticResources>basel_frtb/release_description/release5.trl_transformation</semanticResources>
+  <semanticResources>basel_frtb/transformation_shemes/FRTB_EquityCurvature_FinalCVR_VERSION2.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/report_transformations/FRTBReportCellViewsVERSION2.trl_report_cell_views</semanticResources>
+  <semanticResources>basel_frtb/requirements/default_trl_tag_group.tags</semanticResources>
+  <semanticResources>basel_frtb/views/FRTBCorrelatedCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTBCurvatureScenariosUnion.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTBReportCellViews.trl_report_cell_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTBUncorrelatedCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTB_EquityCurvatureCVRkCalc.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTB_EquityCurvatureCVRkCalc2.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/views/FRTB_EquityCurvature_FinalCVR.trl_sql_views</semanticResources>
+  <semanticResources>basel_frtb/requirements/FRTBProcessAndScenarios.transformation</semanticResources>
+  <semanticResources>basel_frtb/input_layer_cube/FRTBEquityCurvature.transformation</semanticResources>
+  <semanticResources>basel_frtb/input_layer_cube/FRTBReadEquityDelta.transformation</semanticResources>
+  <semanticResources>basel_frtb/navigation_context/defaultNavigationContext.navigation_context</semanticResources>
+  <semanticResources>basel_frtb/release_description/release4.transformation</semanticResources>
+  <semanticResources>basel_frtb/release_description/release5.transformation</semanticResources>
+  <semanticResources>platform:/resource/org.eclipse.efbt.model.design/description/efbt.odesign</semanticResources>
+  <semanticResources>environment:/viewpoint</semanticResources>
+  <ownedViews xmi:type="viewpoint:DView" uid="_Ye4XgEpkEeq508dfmJSfVA">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/org.eclipse.efbt.model.design/description/efbt.odesign#//@ownedViewpoints[name='Modules']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

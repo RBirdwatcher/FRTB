@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trl_sql_views:VersionedSQLViewsModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:column_transformation_logic="http://www.eclipse.org/column_transformation_logic" xmlns:functions="http://www.eclipse.org/functions" xmlns:trl_sql_views="http://www.eclipse.org/trl_sql_views" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="FRTB_EquityCurvatureUnCorrelatedCVR" transformation="../requirements/FRTBProcessAndScenarios.transformation#uncorrelatedCVRs">
+  <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared" name="floored_minimum_shifted_totals_squared">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="floored_minimum_shifted_totals_squared:flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#flooredMinimumShiftedTotalSquared">
+      <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#*">
+        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+        </parameters>
+        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+        </parameters>
+      </basicFunction>
+    </functions>
+  </sqlViews>
+  <sqlViews xsi:type="trl_sql_views:AggregateEnrichmentView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums" name="total_grouped_summed_minimums">
+    <functions columnID="total_grouped_summed_minimums:flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#flooredMinimumShiftedTotalSquared">
+      <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared"/>
+      </aggregateFunction>
+    </functions>
+    <groupByClause groupByColumns="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency"/>
+  </sqlViews>
+</trl_sql_views:VersionedSQLViewsModule>

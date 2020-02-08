@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test:InputDataModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:base_cube_data="http://www.eclipse.org/base_cube_data" xmlns:test="http://www.eclipse.org/test" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
+  <inputData name="input1">
+    <sourceTableData cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data">
+      <rows rowID="girr_curvature_source_datarow1">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow1:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow1:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow1:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow1:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow1:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="10.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow2">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow2:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow2:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow2:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow2:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow2:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow3">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow3:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow3:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow3:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow3:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow3:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow4">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow4:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow4:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow4:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EURIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow4:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow4:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="10.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow5">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow5:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow5:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow5:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EURIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow5:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow5:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow6">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow6:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow6:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow6:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EURIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow6:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow6:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow7">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow7:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow7:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow7:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EIONA"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow7:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow7:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="45.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow8">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow8:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow8:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow8:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EIONA"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow8:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow8:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="18.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow9">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow9:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow9:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow9:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EIONA"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow9:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow9:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="21.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow10">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow10:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow10:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow10:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow10:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position2"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow10:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="10.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow11">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow11:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow11:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow11:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow11:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position2"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow11:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow12">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow12:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow12:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow12:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow12:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position2"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow12:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="20.0"/>
+      </rows>
+      <rows rowID="girr_curvature_source_datarow13">
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow13:Currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="girr_curvature_source_datarow13:ShockDirection" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow13:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow13:InstrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position2"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="girr_curvature_source_datarow13:instrumentValuation" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" value="113.0"/>
+      </rows>
+    </sourceTableData>
+    <sourceTableData cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data">
+      <rows rowID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow1">
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow1:summedGIRR_delta" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" value="1.0"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow1:currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#USD"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow1:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="LIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow1:instrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+      </rows>
+      <rows rowID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow2">
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow2:summedGIRR_delta" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" value="1.0"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow2:currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow2:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EURIBOR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow2:instrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+      </rows>
+      <rows rowID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow3">
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow3:summedGIRR_delta" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" value="1.0"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow3:currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow3:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EIONA"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow3:instrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position1"/>
+      </rows>
+      <rows rowID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow4">
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow4:summedGIRR_delta" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" value="1.0"/>
+        <cells xsi:type="base_cube_data:BaseCellWithEnumeratedValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow4:currency" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" value="../columns/FRTBSourceDomainMembers.birdbench_data_definition#EUR"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow4:curve" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" value="EIONA"/>
+        <cells xsi:type="base_cube_data:BaseCellWithValue" cellID="summed_girr_delta_sensitivities_per_instrument_and_curve_datarow4:instrumentID" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" value="position2"/>
+      </rows>
+    </sourceTableData>
+  </inputData>
+</test:InputDataModule>

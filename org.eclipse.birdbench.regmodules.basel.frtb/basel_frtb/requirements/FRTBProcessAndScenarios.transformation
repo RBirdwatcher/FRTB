@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation:TransformationSchemeModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:transformation="http://www.eclipse.org/transformation" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="FRTBProcessAndScenarios" version="1.0">
+  <transformationSchemes xsi:type="transformation:TransformationSchemeSet" name="FRTBCoreProcess">
+    <subTransformationsAndSchemes xsi:type="transformation:ParallelTransformationScheme" name="FRTBProcesses">
+      <subTransformationsAndSchemes xsi:type="transformation:SerialTransformationScheme" name="EquitySBA">
+        <subTransformationsAndSchemes xsi:type="transformation:ReadDataSourceTransformationScheme" name="readEquityDelta"/>
+        <subTransformationsAndSchemes xsi:type="transformation:SerialTransformationScheme" name="EquityCurvature">
+          <subTransformationsAndSchemes xsi:type="transformation:ReadDataSourceTransformationScheme" name="readEquityCurvatureData"/>
+          <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="deltaStripping">
+            <scenarioSet name="deltaStrippingScenarios">
+              <scenarios name="downShocks"/>
+              <scenarios name="upShocks"/>
+            </scenarioSet>
+          </subTransformationsAndSchemes>
+          <subTransformationsAndSchemes xsi:type="transformation:ScenarioSetTransformationScheme" name="CVRForRiskFactor">
+            <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="getCVRForRiskFactor" scenario="#curvatureApproach1"/>
+            <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="getCVRForRiskFactor2" scenario="#curvatureApproach2"/>
+            <subTransformationsAndSchemes xsi:type="transformation:ScenarioUnionTransformationScheme" name="curvatureScenariosUnion"/>
+            <scenarioSet name="curvatureApproaches">
+              <scenarios name="curvatureApproach1"/>
+              <scenarios name="curvatureApproach2"/>
+            </scenarioSet>
+          </subTransformationsAndSchemes>
+          <subTransformationsAndSchemes xsi:type="transformation:ParallelTransformationScheme" name="aggregatedCVR">
+            <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="correlatedCVRs"/>
+            <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="uncorrelatedCVRs"/>
+          </subTransformationsAndSchemes>
+          <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="finalCVR"/>
+          <subTransformationsAndSchemes xsi:type="transformation:ReportCellCreationTransformationScheme" name="createEquityCurvatureReportCells"/>
+        </subTransformationsAndSchemes>
+      </subTransformationsAndSchemes>
+      <subTransformationsAndSchemes xsi:type="transformation:SerialTransformationScheme" name="InterestRateSBA">
+        <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="InterestRateDelta"/>
+        <subTransformationsAndSchemes xsi:type="transformation:DataSetTransformationTransformationScheme" name="InterestRateCurvature"/>
+      </subTransformationsAndSchemes>
+    </subTransformationsAndSchemes>
+  </transformationSchemes>
+</transformation:TransformationSchemeModule>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trl_sql_views:VersionedSQLViewsModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:column_transformation_logic="http://www.eclipse.org/column_transformation_logic" xmlns:functions="http://www.eclipse.org/functions" xmlns:trl_sql_views="http://www.eclipse.org/trl_sql_views" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="FRTB_EquityCurvature_FinalCVR" version="1" transformation="../requirements/FRTBProcessAndScenarios.transformation#finalCVR">
+  <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff" name="cvr_stuff">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_stuff:cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#cvr_stuff">
+      <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#+">
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#sumOfproductOfCorrelatiedCombinations" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums"/>
+      </basicFunction>
+    </functions>
+  </sqlViews>
+  <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff" name="max_of_cvr_stuff">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="max_of_cvr_stuff:maximum_of_cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#maximum_of_cvr_stuff">
+      <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff"/>
+        <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+      </basicFunction>
+    </functions>
+  </sqlViews>
+  <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#square_roots_of_max_of_cvr_stuff" name="square_roots_of_max_of_cvr_stuff">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="square_roots_of_max_of_cvr_stuff:sqrt_of_maximum_of_cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#square_roots_of_max_of_cvr_stuff" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#sqrt_of_maximum_of_cvr_stuff">
+      <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#sqrt">
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#maximum_of_cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff"/>
+      </basicFunction>
+    </functions>
+  </sqlViews>
+</trl_sql_views:VersionedSQLViewsModule>

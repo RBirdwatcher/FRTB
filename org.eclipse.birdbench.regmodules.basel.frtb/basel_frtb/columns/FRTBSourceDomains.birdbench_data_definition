@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<birdbench_data_definition:DomainModule xmlns:birdbench_data_definition="http://www.eclipse.org/birdbench_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
+  <domains domain_id="Currency" is_enumerated="true" name="Currency"/>
+  <domains domain_id="shockDirection" is_enumerated="true" name="shockDirection"/>
+  <domains data_type="String" domain_id="Strings" name="Strings"/>
+  <domains data_type="Double" domain_id="Numbers" name="Numbers"/>
+</birdbench_data_definition:DomainModule>
