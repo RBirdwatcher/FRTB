@@ -5,60 +5,60 @@
     <whereClause>
       <function functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#!=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor"/>
         </parameters>
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor"/>
         </parameters>
       </function>
     </whereClause>
-    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRl"/>
-    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" toVariable="../columns/FRTBDerivedDimensions.birdbench_data_definition#Currency2"/>
-    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" toVariable="../columns/FRTBDerivedIdentifiers.birdbench_data_definition#curve2"/>
-    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftDown" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftDown2"/>
-    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftUp" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftUp2"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRl"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" toVariable="../columns/FRTBDerivedDimensions.efbt_data_definition#Currency2"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" toVariable="../columns/FRTBDerivedIdentifiers.efbt_data_definition#curve2"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown2"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" fromVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp2"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:FilterByConditionView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out" name="cvr_k_combinations_with_combinations_filtered_out">
     <whereClause>
       <function functionSpec="../functions/commonBaselColumnFunctions.functions#>">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations"/>
       </function>
     </whereClause>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" name="cvr_k_combinations_with_correlation_factor">
-    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_correlation_factor:CVR_CorrelationFactor" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVR_CorrelationFactor">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_correlation_factor:CVR_CorrelationFactor" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVR_CorrelationFactor">
       <basicFunction functionSpec="../functions/FRTBColumnFunctions.functions#getCorrelationFactor">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out"/>
       </basicFunction>
     </functions>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" name="product_of_correlated_combinations">
-    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_combinations:CVRCorrelatedProduct" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRCorrelatedProduct">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_combinations:CVRCorrelatedProduct" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRCorrelatedProduct">
       <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#*">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVR_CorrelationFactor" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVR_CorrelationFactor" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor"/>
       </basicFunction>
     </functions>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:AggregateEnrichmentView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" name="sum_of_product_of_correlated_combinations_by_currency">
-    <functions columnID="sum_of_product_of_correlated_combinations_by_currency:sumOfProductOfCorrelatedCombinations" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#sumOfproductOfCorrelatiedCombinations">
+    <functions columnID="sum_of_product_of_correlated_combinations_by_currency:sumOfProductOfCorrelatedCombinations" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#sumOfproductOfCorrelatiedCombinations">
       <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRCorrelatedProduct" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRCorrelatedProduct" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations"/>
       </aggregateFunction>
     </functions>
-    <groupByClause groupByColumns="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency"/>
+    <groupByClause groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:JoinView" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums" name="product_of_correlated_with_square_of_minimums">
     <whereClause>
       <function functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums"/>
       </function>
     </whereClause>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums"/>
   </sqlViews>
 </trl_sql_views:VersionedSQLViewsModule>

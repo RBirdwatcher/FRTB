@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<birdbench_data_definition:CubeModule xmlns:birdbench_data_definition="http://www.eclipse.org/birdbench_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
+<efbt_data_definition:CubeModule xmlns:efbt_data_definition="http://www.eclipse.org/efbt_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
   <cubes cube_id="girr_curvature_source_data" cube_structure_id="#girr_curvature_source_data_structure" name="girr_curvature_source_data"/>
   <cubes cube_id="summed_girr_delta_sensitivities_per_instrument_and_curve_data" cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" name="summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
   <cubeStructures cube_structure_id="girr_curvature_source_data_structure" name="girr_curvature_source_data_structure"/>
   <cubeStructures cube_structure_id="summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" name="summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure"/>
-  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency"/>
-  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection"/>
-  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve"/>
-  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID"/>
-  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation"/>
-  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta"/>
-  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency"/>
-  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve"/>
-  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID"/>
-</birdbench_data_definition:CubeModule>
+  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection"/>
+  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve"/>
+  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID"/>
+  <cubeStructureItems cube_structure_id="#girr_curvature_source_data_structure" variable_id="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation"/>
+  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#summedGIRR_delta"/>
+  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve"/>
+  <cubeStructureItems cube_structure_id="#summed_girr_delta_sensitivities_per_instrument_and_curve_data_structure" variable_id="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID"/>
+</efbt_data_definition:CubeModule>

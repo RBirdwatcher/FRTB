@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trl_sql_views:VersionedSQLViewsModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:column_transformation_logic="http://www.eclipse.org/column_transformation_logic" xmlns:functions="http://www.eclipse.org/functions" xmlns:trl_sql_views="http://www.eclipse.org/trl_sql_views" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="FRTB_EquityCurvatureCVRkCalc" transformation="../requirements/FRTBProcessAndScenarios.transformation#getCVRForRiskFactor">
   <sqlViews xsi:type="trl_sql_views:AggregateEnrichmentView" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" name="summed_delta_stripped_shifts">
-    <functions columnID="summed_delta_stripped_shifts:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShift">
+    <functions columnID="summed_delta_stripped_shifts:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift">
       <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#deltaStrippedShift" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#deltaStrippedShift" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts"/>
       </aggregateFunction>
     </functions>
-    <groupByClause groupByColumns="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency ../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve ../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection"/>
+    <groupByClause groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency ../columns/FRTBSourceIdentifiers.efbt_data_definition#curve ../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:CopyView" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" name="copy_of_summed_delta_stripped_shifts"/>
   <sqlViews xsi:type="trl_sql_views:JoinView" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" name="up_and_down_delta_stripped_shifts">
     <whereClause>
       <function functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
         </parameters>
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
-            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
+            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
           </parameters>
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
-            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
+            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
           </parameters>
         </parameters>
       </function>
     </whereClause>
-    <renames fromCube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" fromVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShift" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftUp"/>
-    <renames fromCube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" fromVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShift" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftDown"/>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
-    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" fromVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" fromVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
+    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" name="curvature_risk_charge_for_risk_factor1">
-    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor1:CVRk" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#CVRk">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor1:CVRk" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
       <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#min">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftUp" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedDeltaStrippedShiftDown" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts"/>
       </basicFunction>
     </functions>
   </sqlViews>

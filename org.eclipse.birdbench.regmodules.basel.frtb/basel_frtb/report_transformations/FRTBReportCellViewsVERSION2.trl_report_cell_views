@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trl_report_cell_views:ReportCellViewModule xmlns:trl_report_cell_views="http://www.eclipse.org/trl_report_cell_views" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;" name="rc" version="2" transformationScheme="../requirements/FRTBProcessAndScenarios.transformation#createEquityCurvatureReportCells">
   <reportCellViews cube="../cubes/FRTB_EC_DatapointsVERSION2.cubes#equityEURAnotherCurvatureReportCell" name="equityAnotherEURCurvatureReportCellView">
-    <reportCell combination="../cube_structures/FRTBCombinations.birdbench_data_definition#equityEURAnotherCurvatureReportCell" name="equityEURAnotherCurvatureReportCell"/>
+    <reportCell combination="../cube_structures/FRTBCombinations.efbt_data_definition#equityEURAnotherCurvatureReportCell" name="equityEURAnotherCurvatureReportCell"/>
   </reportCellViews>
   <reportCellViews cube="../cubes/FRTB_EC_Datapoints.cubes#equityEURProductReportCell" name="equityEURProductReportCellView">
-    <reportCell combination="../cube_structures/FRTBCombinations.birdbench_data_definition#equityEURProductReportCell" name="equityEURProductReportCell"/>
+    <reportCell combination="../cube_structures/FRTBCombinations.efbt_data_definition#equityEURProductReportCell" name="equityEURProductReportCell"/>
   </reportCellViews>
 </trl_report_cell_views:ReportCellViewModule>

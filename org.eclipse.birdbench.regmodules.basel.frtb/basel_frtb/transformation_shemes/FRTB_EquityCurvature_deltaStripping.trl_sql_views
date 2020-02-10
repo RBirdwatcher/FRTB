@@ -9,54 +9,54 @@
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
                 </parameters>
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
                 </parameters>
               </parameters>
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-                <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
               </parameters>
             </parameters>
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
             </parameters>
           </parameters>
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
           </parameters>
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
                   </parameters>
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
                   </parameters>
                 </parameters>
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
                 </parameters>
               </parameters>
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
               </parameters>
             </parameters>
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
             </parameters>
           </parameters>
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
@@ -64,75 +64,75 @@
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
                   </parameters>
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
                   </parameters>
                 </parameters>
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
                 </parameters>
               </parameters>
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
               </parameters>
             </parameters>
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+              <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
             </parameters>
             <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
                     <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                      <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                      <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+                      <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                      <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
                     </parameters>
                     <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                      <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                      <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+                      <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                      <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
                     </parameters>
                   </parameters>
                   <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#NONE"/>
+                    <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
                   </parameters>
                 </parameters>
                 <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                  <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
                 </parameters>
               </parameters>
               <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+                <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
               </parameters>
             </parameters>
           </parameters>
         </parameters>
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
         </parameters>
       </function>
     </whereClause>
-    <renames fromCube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" fromVariable="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" toVariable="../columns/FRTBDerivedMeasures.birdbench_data_definition#shifted_valuation"/>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+    <renames fromCube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" fromVariable="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation" toVariable="../columns/FRTBDerivedMeasures.efbt_data_definition#shifted_valuation"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" name="valuation_differences">
-    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuationDifference:valuation_differences" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#valuationDifference">
+    <functions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuationDifference:valuation_differences" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#valuationDifference">
       <basicFunction name="valuationDifference:valuation_difference" functionSpec="../functions/commonBaselColumnFunctions.functions#-">
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#shifted_valuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts"/>
-        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceMeasures.birdbench_data_definition#instrumentValuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#shifted_valuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts"/>
+        <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts"/>
         <parameters xsi:type="functions:Function"/>
       </basicFunction>
     </functions>
@@ -142,44 +142,44 @@
       <function name="valuation_differences_linked_with_deltas_join_view_where_clause_function" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
           </parameters>
           <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
-            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+            <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
           </parameters>
         </parameters>
         <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences"/>
         </parameters>
       </function>
     </whereClause>
-    <ignores columnToIgnore="../columns/FRTBSourceDimensions.birdbench_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
-    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.birdbench_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
-    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.birdbench_data_definition#InstrumentID" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+    <ignores columnToIgnore="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
+    <ignores columnToIgnore="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data"/>
   </sqlViews>
   <sqlViews xsi:type="trl_sql_views:EnrichmentView" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" name="delta_stripped_shifts">
-    <functions xsi:type="column_transformation_logic:BasicColumnFunctionWithScenarios" columnID="delta_stripped_shifts:deltaStrippedShift" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" variable="../columns/FRTBDerivedMeasures.birdbench_data_definition#deltaStrippedShift">
+    <functions xsi:type="column_transformation_logic:BasicColumnFunctionWithScenarios" columnID="delta_stripped_shifts:deltaStrippedShift" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#deltaStrippedShift">
       <functionScenarios scenario="../requirements/FRTBProcessAndScenarios.transformation#upShocks">
         <function functionSpec="../functions/commonBaselColumnFunctions.functions#-">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#valuationDifference" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#valuationDifference" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#summedGIRR_delta" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
         </function>
         <filterFunction functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
-          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#UP"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
         </filterFunction>
       </functionScenarios>
       <functionScenarios scenario="../requirements/FRTBProcessAndScenarios.transformation#downShocks">
         <function functionSpec="../functions/commonBaselColumnFunctions.functions#+">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#valuationDifference" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.birdbench_data_definition#summedGIRR_delta" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#valuationDifference" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBDerivedMeasures.efbt_data_definition#summedGIRR_delta" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
         </function>
         <filterFunction functionSpec="../functions/commonBaselColumnFunctions.functions#=">
-          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.birdbench_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
-          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.birdbench_data_definition#DOWN"/>
+          <parameters xsi:type="functions:SpeculativeCubeColumnParameter" column="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas"/>
+          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
         </filterFunction>
       </functionScenarios>
     </functions>

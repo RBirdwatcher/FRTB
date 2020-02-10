@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<birdbench_data_definition:VariableModule xmlns:birdbench_data_definition="http://www.eclipse.org/birdbench_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedGIRR_delta" variable_id="summedGIRR_delta"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="valuationDifference" variable_id="valuationDifference"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="deltaStrippedShift" variable_id="deltaStrippedShift"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedDeltaStrippedShift" variable_id="summedDeltaStrippedShift"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="shifted_valuation" variable_id="shifted_valuation"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="minimum_shifted_total" variable_id="minimum_shifted_total"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="upshiftDeltaStrippedValuation" variable_id="upshiftDeltaStrippedValuation"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="downshiftDeltaStrippedValuation" variable_id="downshiftDeltaStrippedValuation"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="flooredMinimumShiftedTotalSquared" variable_id="flooredMinimumShiftedTotalSquared"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="CVRk" variable_id="CVRk"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="CVRl" variable_id="CVRl"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="CVR_CorrelationFactor" variable_id="CVR_CorrelationFactor"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="CVRCorrelatedProduct" variable_id="CVRCorrelatedProduct"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="sumOfproductOfCorrelatiedCombinations" variable_id="sumOfproductOfCorrelatiedCombinations"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="curvatureRiskExposure_K" variable_id="curvatureRiskExposure_K"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="sqrt_of_maximum_of_cvr_stuff" variable_id="sqrt_of_maximum_of_cvr_stuff"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="maximum_of_cvr_stuff" variable_id="maximum_of_cvr_stuff"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="cvr_stuff" variable_id="cvr_stuff"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedDeltaStrippedShiftUp" variable_id="summedDeltaStrippedShiftUp"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedDeltaStrippedShiftDown" variable_id="summedDeltaStrippedShiftDown"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedDeltaStrippedShiftUp2" variable_id="summedDeltaStrippedShiftUp2"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="summedDeltaStrippedShiftDown2" variable_id="summedDeltaStrippedShiftDown2"/>
-  <variables domain_id="FRTBSourceDomains.birdbench_data_definition#Numbers" name="double_of_max_of_cvr_stuff" variable_id="double_of_max_of_cvr_stuff"/>
-</birdbench_data_definition:VariableModule>
+<efbt_data_definition:VariableModule xmlns:efbt_data_definition="http://www.eclipse.org/efbt_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedGIRR_delta" variable_id="summedGIRR_delta"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="valuationDifference" variable_id="valuationDifference"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="deltaStrippedShift" variable_id="deltaStrippedShift"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedDeltaStrippedShift" variable_id="summedDeltaStrippedShift"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="shifted_valuation" variable_id="shifted_valuation"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="minimum_shifted_total" variable_id="minimum_shifted_total"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="upshiftDeltaStrippedValuation" variable_id="upshiftDeltaStrippedValuation"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="downshiftDeltaStrippedValuation" variable_id="downshiftDeltaStrippedValuation"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="flooredMinimumShiftedTotalSquared" variable_id="flooredMinimumShiftedTotalSquared"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="CVRk" variable_id="CVRk"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="CVRl" variable_id="CVRl"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="CVR_CorrelationFactor" variable_id="CVR_CorrelationFactor"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="CVRCorrelatedProduct" variable_id="CVRCorrelatedProduct"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="sumOfproductOfCorrelatiedCombinations" variable_id="sumOfproductOfCorrelatiedCombinations"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="curvatureRiskExposure_K" variable_id="curvatureRiskExposure_K"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="sqrt_of_maximum_of_cvr_stuff" variable_id="sqrt_of_maximum_of_cvr_stuff"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="maximum_of_cvr_stuff" variable_id="maximum_of_cvr_stuff"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="cvr_stuff" variable_id="cvr_stuff"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedDeltaStrippedShiftUp" variable_id="summedDeltaStrippedShiftUp"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedDeltaStrippedShiftDown" variable_id="summedDeltaStrippedShiftDown"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedDeltaStrippedShiftUp2" variable_id="summedDeltaStrippedShiftUp2"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="summedDeltaStrippedShiftDown2" variable_id="summedDeltaStrippedShiftDown2"/>
+  <variables domain_id="FRTBSourceDomains.efbt_data_definition#Numbers" name="double_of_max_of_cvr_stuff" variable_id="double_of_max_of_cvr_stuff"/>
+</efbt_data_definition:VariableModule>
