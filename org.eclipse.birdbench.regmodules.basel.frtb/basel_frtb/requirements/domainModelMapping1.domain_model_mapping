@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <domain_model_mapping:DomainMappingModule xmlns:domain_model_mapping="http://www.eclipse.org/domain_model_mapping">
   <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTBUncorrelatedCVR.trl_sql_views#FRTB_EquityCurvatureUnCorrelatedCVR" scheme="FRTBProcessAndScenarios.transformation#uncorrelatedCVRs"/>
-  <leafModuleToVersionedCubeSchemaModules/>
-  <leafModuleToReportCellViewModules/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTB_EquityCurvatureCVRkCalc2.trl_sql_views#FRTB_EquityCurvatureCVRkCalc2" scheme="FRTBProcessAndScenarios.transformation#getCVRForRiskFactor2"/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTB_EquityCurvatureCVRkCalc.trl_sql_views#FRTB_EquityCurvatureCVRkCalc" scheme="FRTBProcessAndScenarios.transformation#getCVRForRiskFactor"/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTB_EquityCurvature_FinalCVR.trl_sql_views#FRTB_EquityCurvature_FinalCVR" scheme="FRTBProcessAndScenarios.transformation#finalCVR"/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTB_EquityCurvature_deltaStripping.trl_sql_views#FRTB_EquityCurvature_deltaStripping" scheme="FRTBProcessAndScenarios.transformation#deltaStripping"/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTBCorrelatedCVR.trl_sql_views#FRTB_EquityCurvatureCorrelatedCVR" scheme="FRTBProcessAndScenarios.transformation#correlatedCVRs"/>
+  <leafModuleToVersionedSQLViewsModules module="../transformation_shemes/FRTBCurvatureScenariosUnion.trl_sql_views#curvatureScenariosUnionModule" scheme="FRTBProcessAndScenarios.transformation#curvatureScenariosUnion"/>
+  <leafModuleToVersionedCubeSchemaModules module="../input_layer_cube/FRTBEquityCurvature.transformation#FRTBEquityCurvature" scheme="FRTBProcessAndScenarios.transformation#readEquityCurvatureData"/>
+  <leafModuleToVersionedCubeSchemaModules module="../input_layer_cube/FRTBReadEquityDelta.transformation#EquityDelta" scheme="FRTBProcessAndScenarios.transformation#readEquityDelta"/>
+  <leafModuleToReportCellViewModules scheme="FRTBProcessAndScenarios.transformation#createEquityCurvatureReportCells"/>
   <scenarioToCodeConditions>
     <codeConditions/>
     <codeConditions/>
