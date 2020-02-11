@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <efbt_data_definition:CombinationModule xmlns:efbt_data_definition="http://www.eclipse.org/efbt_data_definition" license="Copyright (c) 2019 Openregtech Ltd&amp;#xA; All rights reserved. This file and the accompanying materials are made available under the terms of the Eclipse Public License v2.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v20.html&amp;#xA;&amp;#xA;SPDX-License-Identifier: EPL-2.0 &amp;#xA;&amp;#xA; Contributors:&amp;#xA; Neil Mackenzie - initial API and implementation&amp;#xD;">
-  <combinations combination_id="equityEURCurvatureReportCell" name="equityEURCurvatureReportCell"/>
-  <combinations combination_id="equityEURProductReportCell" name="equityEURProductReportCell"/>
-  <combinations combination_id="equityEURAnotherCurvatureReportCell" name="equityEURAnotherCurvatureReportCell"/>
-  <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
-  <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#sqrt_of_maximum_of_cvr_stuff"/>
-  <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
-  <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRCorrelatedProduct"/>
-  <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#double_of_max_of_cvr_stuff"/>
-  <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+  <combinations combination_id="equityEURCurvatureReportCell" name="equityEURCurvatureReportCell">
+    <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+    <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#sqrt_of_maximum_of_cvr_stuff"/>
+  </combinations>
+  <combinations combination_id="equityEURProductReportCell" name="equityEURProductReportCell">
+    <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+    <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRCorrelatedProduct"/>
+  </combinations>
+  <combinations combination_id="equityEURAnotherCurvatureReportCell" name="equityEURAnotherCurvatureReportCell">
+    <combination_items member_id="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR" variable_id="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+    <combination_items variable_id="../columns/FRTBDerivedMeasures.efbt_data_definition#double_of_max_of_cvr_stuff"/>
+  </combinations>
 </efbt_data_definition:CombinationModule>
