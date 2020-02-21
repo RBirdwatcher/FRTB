@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platform_call:PlatformCallModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:column_transformation_logic="http://www.eclipse.org/column_transformation_logic" xmlns:cube_transformation_logic="http://www.eclipse.org/cube_transformation_logic" xmlns:functions="http://www.eclipse.org/functions" xmlns:platform_call="http://www.eclipse.org/platform_call">
+  <platformCalls xsi:type="platform_call:GetTestLogic" name="testExecution1" domainMappingModule="../requirements/domainModelMapping1.domain_model_mapping#domainMapping1" initialVersionedTransformationSchemeAndCubeSchemaSet="../release_description/release4.transformation#release4" testDefinition="test1.platform_call#TestDefinition_test1">
+    <testLogic testDefinition="test1.platform_call#TestDefinition_test1">
+      <attributeLineageModel name="almtest">
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor:CVRk" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor1:CVRk"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor2:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor:Currency" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor1:Currency"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor2:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor:curve" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor1:curve"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor2:curve"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor" name="curvatureScenariosUnion">
+            <rowFunction xsi:type="cube_transformation_logic:UnionRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_girr_curvature_source:Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_girr_curvature_source:ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_girr_curvature_source:curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_girr_curvature_source:instrumentValuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" usedInSubsets="true" variable="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:instrumentValuation"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#copy_of_girr_curvature_source" name="copy_of_girr_curvature_source">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:shifted_valuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#shifted_valuation">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:instrumentValuation"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:InstrumentID"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="updown_and_normal_shifts:instrumentValuation" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" usedInSubsets="true" variable="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:instrumentValuation"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#updown_and_normal_shifts" name="updown_and_normal_shifts">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:curve"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:curve"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:curve"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:curve"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:curve"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:curve"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:curve"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:curve"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+              <dependantCubeColumns cubeColumn="#girr_curvature_source_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+              <joinFunction functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                        </parameters>
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                        </parameters>
+                      </parameters>
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+                        <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
+                      </parameters>
+                    </parameters>
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:curve"/>
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:curve"/>
+                    </parameters>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                            <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                          </parameters>
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                            <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                          </parameters>
+                        </parameters>
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+                          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
+                        </parameters>
+                      </parameters>
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:curve"/>
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:curve"/>
+                      </parameters>
+                    </parameters>
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+                    </parameters>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                            <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                          </parameters>
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                            <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                          </parameters>
+                        </parameters>
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                          <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
+                        </parameters>
+                      </parameters>
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:curve"/>
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:curve"/>
+                      </parameters>
+                    </parameters>
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                      <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+                    </parameters>
+                    <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#OR">
+                            <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                              <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                              <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                            </parameters>
+                            <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                              <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:ShockDirection"/>
+                              <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                            </parameters>
+                          </parameters>
+                          <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                            <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:ShockDirection"/>
+                            <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#NONE"/>
+                          </parameters>
+                        </parameters>
+                        <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:curve"/>
+                          <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:curve"/>
+                        </parameters>
+                      </parameters>
+                      <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                        <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+                      </parameters>
+                    </parameters>
+                  </parameters>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#girr_curvature_source_data:Currency"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_girr_curvature_source:Currency"/>
+                </parameters>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuationDifference:valuation_differences" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#valuationDifference">
+              <basicFunction name="valuationDifference:valuation_difference" functionSpec="../functions/commonBaselColumnFunctions.functions#-">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:shifted_valuation"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:instrumentValuation"/>
+                <parameters xsi:type="functions:Function"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences:Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences:ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences:curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences:InstrumentID" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#updown_and_normal_shifts:InstrumentID"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences" name="valuation_differences">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences_linked_with_deltas:valuationDifference" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#valuationDifference">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuationDifference:valuation_differences"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences_linked_with_deltas:Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences_linked_with_deltas:ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences_linked_with_deltas:curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="valuation_differences_linked_with_deltas:summedGIRR_delta" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedGIRR_delta">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:summedGIRR_delta"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#valuation_differences_linked_with_deltas" name="valuation_differences_linked_with_deltas">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:curve"/>
+              <dependantCubeColumns cubeColumn="#valuation_differences:curve"/>
+              <dependantCubeColumns cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:InstrumentID"/>
+              <dependantCubeColumns cubeColumn="#valuation_differences:InstrumentID"/>
+              <dependantCubeColumns cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:Currency"/>
+              <dependantCubeColumns cubeColumn="#valuation_differences:Currency"/>
+              <joinFunction name="valuation_differences_linked_with_deltas_join_view_where_clause_function" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:curve"/>
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:curve"/>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:InstrumentID"/>
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:InstrumentID"/>
+                  </parameters>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_girr_delta_sensitivities_per_instrument_and_curve_data:Currency"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences:Currency"/>
+                </parameters>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:BasicColumnFunctionWithScenarios" columnID="delta_stripped_shifts:deltaStrippedShift" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#deltaStrippedShift">
+              <functionScenarios scenario="../requirements/FRTBProcessAndScenarios.transformation#upShocks">
+                <function functionSpec="../functions/commonBaselColumnFunctions.functions#-">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:valuationDifference"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:summedGIRR_delta"/>
+                </function>
+                <filterFunction functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:ShockDirection"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                </filterFunction>
+              </functionScenarios>
+              <functionScenarios scenario="../requirements/FRTBProcessAndScenarios.transformation#downShocks">
+                <function functionSpec="../functions/commonBaselColumnFunctions.functions#+">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:valuationDifference"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:summedGIRR_delta"/>
+                </function>
+                <filterFunction functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:ShockDirection"/>
+                  <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                </filterFunction>
+              </functionScenarios>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="delta_stripped_shifts:Currency" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="delta_stripped_shifts:ShockDirection" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="delta_stripped_shifts:curve" cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#valuation_differences_linked_with_deltas:curve"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_deltaStripping.cubes#delta_stripped_shifts" name="delta_stripped_shifts">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_stuff:cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#cvr_stuff">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#+">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#product_of_correlated_with_square_of_minimums:flooredMinimumShiftedTotalSquared"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#product_of_correlated_with_square_of_minimums:sumOfproductOfCorrelatiedCombinations"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_stuff:Currency" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#product_of_correlated_with_square_of_minimums:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#cvr_stuff" name="cvr_stuff">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="max_of_cvr_stuff:maximum_of_cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#maximum_of_cvr_stuff">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_stuff:cvr_stuff"/>
+                <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="max_of_cvr_stuff:Currency" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_stuff:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#max_of_cvr_stuff" name="max_of_cvr_stuff">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="square_roots_of_max_of_cvr_stuff:sqrt_of_maximum_of_cvr_stuff" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#square_roots_of_max_of_cvr_stuff" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#sqrt_of_maximum_of_cvr_stuff">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#sqrt">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#max_of_cvr_stuff:maximum_of_cvr_stuff"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="square_roots_of_max_of_cvr_stuff:Currency" cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#square_roots_of_max_of_cvr_stuff" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#max_of_cvr_stuff:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvature_FinalCVR.cubes#square_roots_of_max_of_cvr_stuff" name="square_roots_of_max_of_cvr_stuff">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_curvature_risk_charge_for_risk_factor:CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_curvature_risk_charge_for_risk_factor:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_curvature_risk_charge_for_risk_factor:curve" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:curve"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#copy_of_curvature_risk_charge_for_risk_factor" name="copy_of_curvature_risk_charge_for_risk_factor">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations:CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRl">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_curvature_risk_charge_for_risk_factor:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations:CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations" name="cvr_k_combinations">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#curvature_risk_charge_for_risk_factor:curve"/>
+              <dependantCubeColumns cubeColumn="#copy_of_curvature_risk_charge_for_risk_factor:curve"/>
+              <dependantCubeColumns cubeColumn="#curvature_risk_charge_for_risk_factor:Currency"/>
+              <dependantCubeColumns cubeColumn="#copy_of_curvature_risk_charge_for_risk_factor:Currency"/>
+              <joinFunction functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#!=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:curve"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_curvature_risk_charge_for_risk_factor:curve"/>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:Currency"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_curvature_risk_charge_for_risk_factor:Currency"/>
+                </parameters>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_combinations_filtered_out:CVRl" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRl">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations:CVRl"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_combinations_filtered_out:CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_combinations_filtered_out:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_combinations_filtered_out" name="cvr_k_combinations_with_combinations_filtered_out">
+            <rowFunction xsi:type="cube_transformation_logic:RowFilterFunction">
+              <dependantCubeColumns cubeColumn="#cvr_k_combinations:CVRk"/>
+              <dependantCubeColumns cubeColumn="#cvr_k_combinations:CVRl"/>
+              <filterFunction functionSpec="../functions/commonBaselColumnFunctions.functions#>">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations:CVRk"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations:CVRl"/>
+              </filterFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_correlation_factor:CVR_CorrelationFactor" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVR_CorrelationFactor">
+              <basicFunction functionSpec="../functions/FRTBColumnFunctions.functions#getCorrelationFactor">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_combinations_filtered_out:CVRk"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_combinations_filtered_out:CVRl"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_correlation_factor:CVRk" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_combinations_filtered_out:CVRk"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="cvr_k_combinations_with_correlation_factor:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_combinations_filtered_out:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#cvr_k_combinations_with_correlation_factor" name="cvr_k_combinations_with_correlation_factor">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_combinations:CVRCorrelatedProduct" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRCorrelatedProduct">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#*">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_correlation_factor:CVRk"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_correlation_factor:CVR_CorrelationFactor"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_combinations:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#cvr_k_combinations_with_correlation_factor:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_combinations" name="product_of_correlated_combinations">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="sum_of_product_of_correlated_combinations_by_currency:sumOfProductOfCorrelatedCombinations" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#sumOfproductOfCorrelatiedCombinations">
+              <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#product_of_correlated_combinations:CVRCorrelatedProduct"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="sum_of_product_of_correlated_combinations_by_currency:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#product_of_correlated_combinations:Currency"/>
+              </aggregateFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#sum_of_product_of_correlated_combinations_by_currency" name="sum_of_product_of_correlated_combinations_by_currency">
+            <rowFunction xsi:type="cube_transformation_logic:RowGroupByFunction" groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" groupByCubeColumns="#product_of_correlated_combinations:Currency">
+              <dependantCubeColumns cubeColumn="#product_of_correlated_combinations:Currency"/>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_with_square_of_minimums:flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#flooredMinimumShiftedTotalSquared">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#total_grouped_summed_minimums:flooredMinimumShiftedTotalSquared"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_with_square_of_minimums:sumOfproductOfCorrelatiedCombinations" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#sumOfproductOfCorrelatiedCombinations">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#sum_of_product_of_correlated_combinations_by_currency:sumOfProductOfCorrelatedCombinations"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="product_of_correlated_with_square_of_minimums:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#sum_of_product_of_correlated_combinations_by_currency:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#product_of_correlated_with_square_of_minimums" name="product_of_correlated_with_square_of_minimums">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#sum_of_product_of_correlated_combinations_by_currency:Currency"/>
+              <dependantCubeColumns cubeColumn="#total_grouped_summed_minimums:Currency"/>
+              <joinFunction functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#sum_of_product_of_correlated_combinations_by_currency:Currency"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#total_grouped_summed_minimums:Currency"/>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift">
+              <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:deltaStrippedShift"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:Currency"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:curve"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts:ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:ShockDirection"/>
+              </aggregateFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#summed_delta_stripped_shifts" name="summed_delta_stripped_shifts">
+            <rowFunction xsi:type="cube_transformation_logic:RowGroupByFunction" groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency ../columns/FRTBSourceIdentifiers.efbt_data_definition#curve ../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" groupByCubeColumns="#delta_stripped_shifts:Currency #delta_stripped_shifts:curve #delta_stripped_shifts:ShockDirection">
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:Currency"/>
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:curve"/>
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:ShockDirection"/>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts:ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#copy_of_summed_delta_stripped_shifts" name="copy_of_summed_delta_stripped_shifts">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts:summedDeltaStrippedShiftUp" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts:summedDeltaStrippedShiftDown" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#up_and_down_delta_stripped_shifts" name="up_and_down_delta_stripped_shifts">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#copy_of_summed_delta_stripped_shifts:curve"/>
+              <dependantCubeColumns cubeColumn="#summed_delta_stripped_shifts:curve"/>
+              <dependantCubeColumns cubeColumn="#summed_delta_stripped_shifts:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_summed_delta_stripped_shifts:ShockDirection"/>
+              <joinFunction functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts:curve"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:curve"/>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts:ShockDirection"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts:ShockDirection"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                  </parameters>
+                </parameters>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor1:CVRk" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#min">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts:summedDeltaStrippedShiftUp"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts:summedDeltaStrippedShiftDown"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor1:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor1:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts:curve"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc.cubes#curvature_risk_charge_for_risk_factor1" name="curvature_risk_charge_for_risk_factor1">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts2:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift">
+              <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:deltaStrippedShift"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts2:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:Currency"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts2:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:curve"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="summed_delta_stripped_shifts2:ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#delta_stripped_shifts:ShockDirection"/>
+              </aggregateFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#summed_delta_stripped_shifts2" name="summed_delta_stripped_shifts2">
+            <rowFunction xsi:type="cube_transformation_logic:RowGroupByFunction" groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency ../columns/FRTBSourceIdentifiers.efbt_data_definition#curve ../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection" groupByCubeColumns="#delta_stripped_shifts:Currency #delta_stripped_shifts:curve #delta_stripped_shifts:ShockDirection">
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:Currency"/>
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:curve"/>
+              <dependantCubeColumns cubeColumn="#delta_stripped_shifts:ShockDirection"/>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts2:summedDeltaStrippedShift" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#copy_of_summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShift">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts2:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#copy_of_summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="copy_of_summed_delta_stripped_shifts2:ShockDirection" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#copy_of_summed_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:ShockDirection"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#copy_of_summed_delta_stripped_shifts2" name="copy_of_summed_delta_stripped_shifts2">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts2:summedDeltaStrippedShiftUp" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#up_and_down_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftUp">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts2:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#up_and_down_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts2:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#up_and_down_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:curve"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="up_and_down_delta_stripped_shifts2:summedDeltaStrippedShiftDown" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#up_and_down_delta_stripped_shifts2" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedDeltaStrippedShiftDown">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts2:summedDeltaStrippedShift"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#up_and_down_delta_stripped_shifts2" name="up_and_down_delta_stripped_shifts2">
+            <rowFunction xsi:type="cube_transformation_logic:RowJoinFunction">
+              <dependantCubeColumns cubeColumn="#copy_of_summed_delta_stripped_shifts2:curve"/>
+              <dependantCubeColumns cubeColumn="#summed_delta_stripped_shifts2:curve"/>
+              <dependantCubeColumns cubeColumn="#summed_delta_stripped_shifts2:ShockDirection"/>
+              <dependantCubeColumns cubeColumn="#copy_of_summed_delta_stripped_shifts2:ShockDirection"/>
+              <joinFunction functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts2:curve"/>
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:curve"/>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#AND">
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#summed_delta_stripped_shifts2:ShockDirection"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#UP"/>
+                  </parameters>
+                  <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#=">
+                    <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#copy_of_summed_delta_stripped_shifts2:ShockDirection"/>
+                    <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#DOWN"/>
+                  </parameters>
+                </parameters>
+              </joinFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor2:CVRk" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#curvature_risk_charge_for_risk_factor2" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#min">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts2:summedDeltaStrippedShiftUp"/>
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts2:summedDeltaStrippedShiftDown"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor2:Currency" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#curvature_risk_charge_for_risk_factor2" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts2:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor2:curve" cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#curvature_risk_charge_for_risk_factor2" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#up_and_down_delta_stripped_shifts2:curve"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvaturCVRkCalc2.cubes#curvature_risk_charge_for_risk_factor2" name="curvature_risk_charge_for_risk_factor2">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="floored_minimum_shifted_totals_squared:flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#flooredMinimumShiftedTotalSquared">
+              <basicFunction functionSpec="../functions/commonBaselColumnFunctions.functions#*">
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:CVRk"/>
+                  <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+                </parameters>
+                <parameters xsi:type="functions:BasicFunction" functionSpec="../functions/commonBaselColumnFunctions.functions#max">
+                  <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:CVRk"/>
+                  <parameters xsi:type="functions:ValueParameter" dataType="Double" value="0.0"/>
+                </parameters>
+              </basicFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="floored_minimum_shifted_totals_squared:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <basicFunction functionSpec="#CopyColumn">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#curvature_risk_charge_for_risk_factor:Currency"/>
+              </basicFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#floored_minimum_shifted_totals_squared" name="floored_minimum_shifted_totals_squared">
+            <rowFunction xsi:type="cube_transformation_logic:OneToOneRowFunction"/>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="total_grouped_summed_minimums:flooredMinimumShiftedTotalSquared" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#flooredMinimumShiftedTotalSquared">
+              <aggregateFunction functionSpec="../functions/commonBaselColumnFunctions.functions#SUM">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#floored_minimum_shifted_totals_squared:flooredMinimumShiftedTotalSquared"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="total_grouped_summed_minimums:Currency" cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#floored_minimum_shifted_totals_squared:Currency"/>
+              </aggregateFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EquityCurvatureAggregatedCVR.cubes#total_grouped_summed_minimums" name="total_grouped_summed_minimums">
+            <rowFunction xsi:type="cube_transformation_logic:RowGroupByFunction" groupByColumns="../columns/FRTBSourceDimensions.efbt_data_definition#Currency" groupByCubeColumns="#floored_minimum_shifted_totals_squared:Currency">
+              <dependantCubeColumns cubeColumn="#floored_minimum_shifted_totals_squared:Currency"/>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <rowTransformations usedInSubsets="true">
+          <columnFunctionGroup>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="equityEURCurvatureReportCell:sqrt_of_maximum_of_cvr_stuff" cube="../cubes/FRTB_EC_Datapoints.cubes#equityEURCurvatureReportCell" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#sqrt_of_maximum_of_cvr_stuff">
+              <aggregateFunction functionSpec="#SUM">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#square_roots_of_max_of_cvr_stuff:sqrt_of_maximum_of_cvr_stuff"/>
+              </aggregateFunction>
+            </columnFunctions>
+            <columnFunctions xsi:type="column_transformation_logic:AggregateColumnFunction" columnID="equityEURCurvatureReportCell:Currency" cube="../cubes/FRTB_EC_Datapoints.cubes#equityEURCurvatureReportCell" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <aggregateFunction functionSpec="#First">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#square_roots_of_max_of_cvr_stuff:Currency"/>
+              </aggregateFunction>
+            </columnFunctions>
+          </columnFunctionGroup>
+          <cubeLogic cube="../cubes/FRTB_EC_Datapoints.cubes#equityEURCurvatureReportCell" name="equityEURCurvatureReportCellView">
+            <rowFunction xsi:type="cube_transformation_logic:FilterAndGroupToOneRowFunction" groupByVariables="../columns/FRTBSourceDimensions.efbt_data_definition#Currency">
+              <dependantCubeColumns cubeColumn="#square_roots_of_max_of_cvr_stuff:Currency"/>
+              <filterFunction functionSpec="#//@platformCalls.0/@testLogic/@attributeLineageModel/@specialFunctionSpecs.3">
+                <parameters xsi:type="functions:ResolvedCubeColumnParameter" cubeColumn="#square_roots_of_max_of_cvr_stuff:Currency"/>
+                <parameters xsi:type="functions:MemberParameter" param="../columns/FRTBSourceDomainMembers.efbt_data_definition#EUR"/>
+              </filterFunction>
+            </rowFunction>
+          </cubeLogic>
+        </rowTransformations>
+        <baseSchemas cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true">
+          <columns columnID="girr_curvature_source_data:Currency" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+          <columns columnID="girr_curvature_source_data:ShockDirection" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#ShockDirection"/>
+          <columns columnID="girr_curvature_source_data:curve" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve"/>
+          <columns columnID="girr_curvature_source_data:InstrumentID" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID"/>
+          <columns columnID="girr_curvature_source_data:instrumentValuation" cube="../cubes/FRTBSourceTables.cubes#girr_curvature_source_data" usedInSubsets="true" variable="../columns/FRTBSourceMeasures.efbt_data_definition#instrumentValuation"/>
+        </baseSchemas>
+        <baseSchemas cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data" usedInSubsets="true">
+          <columns columnID="summed_girr_delta_sensitivities_per_instrument_and_curve_data:summedGIRR_delta" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data" usedInSubsets="true" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#summedGIRR_delta"/>
+          <columns columnID="summed_girr_delta_sensitivities_per_instrument_and_curve_data:Currency" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data" usedInSubsets="true" variable="../columns/FRTBSourceDimensions.efbt_data_definition#Currency"/>
+          <columns columnID="summed_girr_delta_sensitivities_per_instrument_and_curve_data:curve" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#curve"/>
+          <columns columnID="summed_girr_delta_sensitivities_per_instrument_and_curve_data:InstrumentID" cube="../cubes/FRTBSourceTables.cubes#summed_girr_delta_sensitivities_per_instrument_and_curve_data" usedInSubsets="true" variable="../columns/FRTBSourceIdentifiers.efbt_data_definition#InstrumentID"/>
+        </baseSchemas>
+        <specialFunctionSpecs xsi:type="functions:BasicFunctionSpec" functionalName="funcs.CopyColumn" name="CopyColumn" sqlName="ID"/>
+        <specialFunctionSpecs xsi:type="functions:AggregateFunctionSpec" functionalName="funcs.First" name="First" sqlName="First"/>
+        <specialFunctionSpecs xsi:type="functions:AggregateFunctionSpec" functionalName="funcs.SUM" name="SUM" sqlName="SUM"/>
+        <specialFunctionSpecs xsi:type="functions:BasicFunctionSpec" functionalName="==" sqlName="=" isInfix="true"/>
+      </attributeLineageModel>
+    </testLogic>
+  </platformCalls>
+</platform_call:PlatformCallModule>
