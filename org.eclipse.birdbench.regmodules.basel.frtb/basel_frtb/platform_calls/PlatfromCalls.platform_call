@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <platform_call:PlatformCallModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:column_transformation_logic="http://www.eclipse.org/column_transformation_logic" xmlns:cube_transformation_logic="http://www.eclipse.org/cube_transformation_logic" xmlns:functions="http://www.eclipse.org/functions" xmlns:platform_call="http://www.eclipse.org/platform_call">
   <platformCalls xsi:type="platform_call:GetAttributeLineageModel" name="getALM1" transformationContext="../release_description/release4.transformation#release4">
-    <resultingModel name="ALM1">
+    <resultingModel name="alm1">
       <rowTransformations>
         <columnFunctionGroup>
           <columnFunctions xsi:type="column_transformation_logic:StandardBasicColumnFunction" columnID="curvature_risk_charge_for_risk_factor:CVRk" cube="../cubes/FRTBCurvatureScenariosUnion.cubes#curvature_risk_charge_for_risk_factor" variable="../columns/FRTBDerivedMeasures.efbt_data_definition#CVRk">
