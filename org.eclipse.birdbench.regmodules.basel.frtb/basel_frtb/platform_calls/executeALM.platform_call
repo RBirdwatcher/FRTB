@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platform_call:ExecuteAttributeLineageModel xmlns:platform_call="http://www.eclipse.org/platform_call" name="executeALM1" attributeLineageModel="PlatfromCalls.platform_call#ALM1" inputdir="C:\Users\Neil\git\FRTB\org.eclipse.birdbench.regmodules.basel.frtb\basel_frtb" outputdir="C:\Users\Neil\git\FreeBIRDTools_orig\bundles\org.eclipse.efbt.scala_output\src" programInputs="../input_data/FRTBInputData.test#//@inputData.0"/>
